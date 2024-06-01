@@ -14,6 +14,11 @@ Navigate to the project directory:
 
 Install dependencies using npm
 
+npm install @mui/material @emotion/react @emotion/styled
+
+npm install @mui/icons-material
+
+
 ### npm install
 Start the development server:
 
