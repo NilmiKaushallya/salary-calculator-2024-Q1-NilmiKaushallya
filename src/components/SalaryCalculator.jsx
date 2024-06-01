@@ -17,6 +17,8 @@ import {
 } from '@mui/material';
 import RefreshIcon from '@mui/icons-material/Refresh';
 import CancelIcon from '@mui/icons-material/Cancel';
+import LinkIcon from '../assets/_Link.png';
+
 
 
 
@@ -125,15 +127,15 @@ const SalaryCalculator = () => {
                         <CardContent>
                             <Box>
                                 <Stack direction="row" justifyContent="space-between" alignItems="center" mb={2}>
-                                    <Typography variant="h5" fontWeight="bold" gutterBottom>
+                                    <Typography variant="h5" font-family='Inter' fontSize='20px' fontWeight="700" gutterBottom>
                                         Calculate Your Salary
                                     </Typography>
-                                    <Button variant="text" onClick={handleReset} startIcon={<RefreshIcon />}>
-                                        Reset
-                                    </Button>
+                                     <IconButton onClick={handleReset}> <img src={LinkIcon} alt="reset icon" style={{ width: '66px', height: '40px', top: '158px', left: '718px'}} />
+                                        </IconButton>     
+
                                 </Stack>
 
-                                <Typography variant="h6" fontWeight="bold" gutterBottom>
+                                <Typography variant="h6" fontWeight="600"  font-family='Inter' font-size='16px' gutterBottom>
                                     Basic Salary
                                 </Typography>
                                 <TextField
@@ -141,14 +143,14 @@ const SalaryCalculator = () => {
                                     onChange={(e) => setBasicSalary(Number(e.target.value))}
                                     fullWidth
                                     margin="normal"
-                                    style={{ width: '100%', marginBottom: '16px' }}
+                                    style={{ width: 'Fixed (356px)px', marginBottom: '16px',marginTop: '2px',height: 'Hug (48px)px',   border:'1px 0px 0px 0px'}}
                                 />
 
                                 <Stack>
-                                    <Typography variant="h6" fontWeight="bold" gutterBottom>
+                                    <Typography variant="h6" fontWeight="600" font-family= 'Inter' font-size='16px' gutterBottom>
                                         Earnings
                                     </Typography>
-                                    <Typography variant="caption" gutterBottom>
+                                    <Typography variant="caption" background= 'rgba(117, 117, 117, 1)' font-family= 'Inter'   font-size= '12px'  font-weight= '400'   gutterBottom>
                                         Allowance, Fixed Allowance, Bonus, and etc.
                                     </Typography>
                                     {earnings.map((earning, index) => (
